@@ -31,6 +31,7 @@ $ads = [
     ],
 
 ];
+
 ?>
 
 <!DOCTYPE html>
@@ -51,13 +52,16 @@ $ads = [
 
     <?php
 
-    $random = rand(0, count($ads));
+
+    $random = rand(0, 3);
+
 
     foreach ($ads as $key => $value) {
 
-        if ($value['is_active'] && $random == $key) {
+        if ($value['is_active'] && $random == count($value)) {
 
     ?>
+
             <img src="<?php echo $value['image_path'] ?>" alt="">
 
 
